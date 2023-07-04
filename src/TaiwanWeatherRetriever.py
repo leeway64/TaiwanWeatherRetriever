@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+import jwt
 import datetime
 
 app = Flask(__name__)
@@ -7,8 +8,10 @@ founding_year = 1912
 
 def get_minguo_year(year):
     minguo_year = year - (founding_year - 1)
-    minguo_year_result = {"minguo_year": minguo_year} 
-    return minguo_year_result    
+    minguo_year_result = {"minguo_year": minguo_year}
+    encoded_minguo = jwt.encode(minguo_year_result, "Taiwan is awesome", algorithm = "HS256")
+    decoded_minguo = jwt.decode(encoded_minguo, "Taiwan is awesome", algorithms = "HS256")
+    return decoded_minguo
 
 
 @app.get("/minguo")

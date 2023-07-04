@@ -8,3 +8,6 @@ SHELL := /usr/bin/env bash
 # .venv is a prerequisite for the run-tests target
 run-tests: .venv
 	pytest
+
+draw-logo:
+	@bash lib/draw-logo.sh

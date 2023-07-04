@@ -1,3 +1,6 @@
 # Python-related files
 .venv/
 __pycache__/
+
+# Node.js dependencies
+node_modules/
