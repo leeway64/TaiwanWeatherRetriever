@@ -4,3 +4,8 @@ __pycache__/
 
 # Node.js dependencies
 node_modules/
+
+# Files generated from pdflatex
+*.pdf
+*.aux
+*.log

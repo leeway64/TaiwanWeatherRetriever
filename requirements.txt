@@ -1,5 +1,4 @@
 pytest
 Flask
 jsonify
-pipe
 loguru
