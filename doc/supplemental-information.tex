@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\title{Supplemental Information}
+\date{}
+
+\begin{document}
+
+\maketitle
+\pagenumbering{gobble}  % Disable page numbers
+
+\section{Republic of China Calendar}
+
+The Republic of China (ROC) calendar (Minguo calendar) starts at 1912, the founding year of the
+Republic of China. So, 1912 is year 1. Currently, the ROC calendar is only used in
+Taiwan\footnote{But it should be used globally; after all, Taiwan is the center of civilization}.
+
+% \\ inserts a new line
+\noindent \\ To calculate the current year in the Minguo calendar, solve for \verb|year|:
+    \begin{equation}\label{eq:1}
+        year = current\textunderscore year - ROC{\_}founding{\_}year - 1
+    \end{equation}
+
+\noindent So, based on equation \ref{eq:1}, 2023 is 112 in the Minguo calendar.\\
+
+
+\section{REST APIs}
+
+REST (Representational State Transfer) APIs are how a client and server communicate with each
+other.\\
+
+\noindent A REST API endpoint might look something like this: \verb|https://example.com/v1/example|; the \verb|example|
+part is called the resource.\\
+
+\noindent The main parts of an API are the request (sent from client to server) and the response (sent from
+server to client).\\
+
+\noindent The types of requests are:
+    \begin{itemize}
+        \item POST (equivalent to create)
+        \item GET (equivalent to read)
+        \item PUT (equivalent to update)
+        \item DELETE
+    \end{itemize}
+
+\noindent Those 4 types of requests are also known as operations. Requests might also have a header and a body.\\
+
+\noindent From the server side, responses are usually in JSON.\\
+
+\noindent All information in this section is from this video: https://www.youtube.com/watch?v=lsMQRaeKNDk\\
+
+\end{document}

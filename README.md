@@ -60,8 +60,8 @@ make run-tests
 ## Third-Party Software
 - [Flask](https://github.com/pallets/flask) (BSD 3-Clause License): Python framework for building web applications
 - [jwt](https://github.com/GehirnInc/python-jwt) (Apache License 2.0): JSON Web Token library for Python
-- [Pytest](https://docs.pytest.org/en/7.3.x/license.html) (MIT License): Python testing framework
 - [figlet](https://www.npmjs.com/package/figlet) (MIT License): ASCII art renderer for Node.js
+- [pytest](https://docs.pytest.org/en/7.3.x/license.html) (MIT License): Python testing framework
 
 In addition to the previous sofware, this project also uses texlive, texinfo,
 texlive-fonts-recommended, and texlive-fonts-extra to convert LaTeX to PDF. For Ubuntu-based
