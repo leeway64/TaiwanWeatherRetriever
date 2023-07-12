@@ -1,10 +1,13 @@
 # TaiwanWeatherRetriever
+
+```text
   _______    _                 __          __        _   _               _____      _        _
  |__   __|  (_)                \ \        / /       | | | |             |  __ \    | |      (_)
     | | __ _ ___      ____ _ _ _\ \  /\  / /__  __ _| |_| |__   ___ _ __| |__) |___| |_ _ __ _  _____   _____ _ __ 
     | |/ _` | \ \ /\ / / _` | '_ \ \/  \/ / _ \/ _` | __| '_ \ / _ \ '__|  _  // _ \ __| '__| |/ _ \ \ / / _ \ '__|
     | | (_| | |\ V  V / (_| | | | \  /\  /  __/ (_| | |_| | | |  __/ |  | | \ \  __/ |_| |  | |  __/\ V /  __/ |
     |_|\__,_|_| \_/\_/ \__,_|_| |_|\/  \/ \___|\__,_|\__|_| |_|\___|_|  |_|  \_\___|\__|_|  |_|\___| \_/ \___|_| 
+```
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/leeway64/TaiwanWeatherRetriever)
@@ -12,7 +15,7 @@
 TaiwanWeatherRetriever is a REST API running as a Linux `systemd` service that gets the current
 weather for any region in Taiwan.
 
-As a bonus, TaiwanWeatherRetriever can also find the equivalent 民國 year for any year.
+As a bonus, TaiwanWeatherRetriever can also find the equivalent 民國 calendar year for any year.
 
 
 ## Installation
@@ -41,12 +44,38 @@ make draw-logo
 
 ## Usage
 
-### POST
+### POST Request for Weather
+```mermaid
+
+```
+
 ```bash
 
 ```
 
-### GET
+### POST Request for 民國 Calendar Year
+```mermaid
+sequenceDiagram
+    actor User
+	%% Actor activations and + and -
+    User-->>+localhost:5000/minguo: POST request containing the year to convert
+    localhost:5000/minguo-->>-User: Response: Year in the POST request body converted to the year in the 民國 calendar
+```
+
+```bash
+
+```
+
+### GET Request for Current 民國 Calendar Year
+```mermaid
+sequenceDiagram
+    User->>localhost:5000/minguo: GET request
+	%% This is a comment
+	%% Support Taiwanese businesses, such as TSMC!
+    localhost:5000/minguo->>User: Response: Current 民國 calendar year
+	Note over User,localhost: These diagrams were drawn using Mermaid
+```
+
 ```bash
 
 ```
