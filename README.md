@@ -58,8 +58,8 @@ make draw-logo
 sequenceDiagram
     actor User
 	%% Actor activations and + and -
-    User-->>+localhost:5000/minguo: POST request containing the year to convert
-    localhost:5000/minguo-->>-User: Response: Year in the POST request body converted to the year in the 民國 calendar
+    User-->>+Endpoint: POST request containing year to convert
+    Endpoint-->>-User: Response: Year in request body converted to equivalent year in 民國 calendar
 ```
 
 ```bash
@@ -69,11 +69,11 @@ sequenceDiagram
 ### GET Request for Current 民國 Calendar Year
 ```mermaid
 sequenceDiagram
-    User->>localhost:5000/minguo: GET request
+    User->>Endpoint: GET request
 	%% This is a comment
 	%% Support Taiwanese businesses, such as TSMC!
-    localhost:5000/minguo->>User: Response: Current 民國 calendar year
-	Note over User,localhost: These diagrams were drawn using Mermaid
+    Endpoint->>User: Response: Current 民國 calendar year
+	Note over User,Endpoint: These diagrams were drawn using Mermaid
 ```
 
 ```bash
